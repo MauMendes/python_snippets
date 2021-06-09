@@ -5,3 +5,6 @@ Test how to call a python script from a specific version of python.
 
 ### metservice.py
 Test how to access data from metservice.com
+
+### dir_size_check.py
+Check directories with size greater than 100MB
