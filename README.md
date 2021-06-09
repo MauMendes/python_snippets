@@ -8,3 +8,6 @@ Test how to access data from metservice.com
 
 ### dir_size_check.py
 Check directories with size greater than 100MB
+
+### funny_weather.py and funny_moon.py
+Get weather and moon conditions in some beautiful console ascii drawing.
