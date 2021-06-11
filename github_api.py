@@ -1,7 +1,5 @@
 import requests
 import json
-import os
-from pprint import pprint
 
 token =""
 
@@ -40,6 +38,7 @@ def github_get_user_repos(username,token=""):
     return repo_list
 
 print(github_get_user_repos("MauMendes"))
+print("#################################################")
 print(github_get_user_repos("MauMendes", token ))
 
 
