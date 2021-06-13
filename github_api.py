@@ -1,6 +1,7 @@
 import requests
 import json
 
+# insert your token(https://github.com/settings/tokens) bellow for private repositories as well
 token =""
 
 def github_get_user_data(username):
