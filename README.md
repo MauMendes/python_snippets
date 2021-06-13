@@ -11,3 +11,9 @@ Check directories with size greater than 100MB
 
 ### funny_weather.py and funny_moon.py
 Get weather and moon conditions in some beautiful console ascii drawing.
+
+### git_pull_projects.py
+Some test about how to pull projects using GitPython
+
+### github_api.py
+Some test about how to use github api
