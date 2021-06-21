@@ -1,4 +1,5 @@
 #pip install GitPython
+#C:\Python38\Scripts\pip.exe install GitPython
 import git
 from git import Repo
 
@@ -43,6 +44,12 @@ def git_pull(folder_path="."):
         print(folder_path + " is not a git Repository!!!")
         return
 
+def git_clone(file_path="."):
+    print(file_path)
+    with open(file_path, 'r') as fp:
+        for line in fp:
+            print(row)
+   
 git_pull()
 print('Done')
 
