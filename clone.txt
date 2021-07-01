@@ -1,0 +1,3 @@
+ALGCOM,https://mauricio_hardcode@bitbucket.org/hardcode_projetos/bl_imggen.git
+ALGCOM,https://mauricio_hardcode@bitbucket.org/hardcode_projetos/hc1901x.git
+ALGCOM,https://mauricio_hardcode@bitbucket.org/hardcode_projetos/hc1901x_acc.git

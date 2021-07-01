@@ -1,1 +1,1 @@
-"C:\Python38\python.exe" "main.py"
+"C:\Python38\python.exe" "pystocks.py"
