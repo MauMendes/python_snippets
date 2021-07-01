@@ -3,24 +3,47 @@
 
 import yfinance as yf
 
-#define the ticker symbol
-tickerSymbol = 'MSFT'
+def getStock(tickerSymbol):
+    print(tickerSymbol)
+    #define the ticker symbol
+    #get data on this ticker
+    tickerData = yf.Ticker(tickerSymbol)
 
-#get data on this ticker
-tickerData = yf.Ticker(tickerSymbol)
+    #info on the company
+    #print(tickerData.info)
+    #print("###########################")
 
-#info on the company
-print(tickerData.info)
+    #info on the company calendar
+    #print(tickerData.calendar)
+    #print("###########################")
 
-#info on the company calendar
-print(tickerData.calendar)
+    #get recommendation data for ticker
+    #print(tickerData.recommendations)
+    #print("###########################")
 
-#get recommendation data for ticker
-print(tickerData.recommendations)
+    #print(tickerData.dividends)
+    #print("###########################")
 
-#get the historical prices for this ticker
-#tickerDf = tickerData.history(period='1mo', start='2020-1-1', end='2021-1-1')
-tickerDf = tickerData.history(period='1y', interval='1mo')
+    #print(tickerData.actions)
+    #print("###########################")
 
-#see your data
-print(tickerDf)
+    #print(tickerData.financials)
+    #print("###########################")
+
+    #print(tickerData.quarterly_financials)
+    #print("###########################")
+
+    #print(tickerData.major_holders)
+    #print("###########################")
+
+
+    #get the historical prices for this ticker
+    #tickerDf = tickerData.history(period='1mo', start='2020-1-1', end='2021-1-1')
+    tickerDf = tickerData.history(period='1d', interval='1d')
+    #see your data
+    print(tickerDf)
+    print("###################################################################")
+
+stocks = ['AIR.NZ', 'KMD.NZ', 'KFL.NZ', 'AAPL', 'MSFT', 'VTI', 'SRET']
+for stock in stocks:
+    getStock(stock)
