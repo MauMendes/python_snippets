@@ -3,6 +3,6 @@
 import pywhatkit as kit
 
 phone_number = xxxxxxx
-kit.sendwhatmsg_instantly(f"+64{phone_number}", "teste 123", 14, 3)
+kit.sendwhatmsg_instantly(f"+64{phone_number}", "test 123", 14, 3)
 
 print('done')
