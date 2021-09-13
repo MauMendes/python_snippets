@@ -86,3 +86,47 @@ with gzip.open(filename_out, "rb") as fin:
     data = fin.read()
     print(f"Decompressed size: {sys.getsizeof(data)}")
     # Decompressed size: 1000033
+    
+### EXAMPLE 5
+import zipfile
+
+# shuf -n5 /usr/share/dict/words > words.txt
+files = ["words1.txt", "words2.txt", "words3.txt", "words4.txt", "words5.txt"]
+archive = "archive.zip"
+password = b"verysecret"
+
+with zipfile.ZipFile(archive, "w") as zf:
+    for file in files:
+        zf.write(file)
+
+    zf.setpassword(password)
+
+with zipfile.ZipFile(archive, "r") as zf:
+    crc_test = zf.testzip()
+    if crc_test is not None:
+        print(f"Bad CRC or file headers: {crc_test}")
+
+    info = zf.infolist()  # also zf.namelist()
+    print(info)  # See all attributes at https://docs.python.org/3/library/zipfile.html#zipinfo-objects
+    # [ <ZipInfo filename='words1.txt' filemode='-rw-r--r--' file_size=37>,
+    #   <ZipInfo filename='words2.txt' filemode='-rw-r--r--' file_size=47>,
+    #   ... ]
+
+    file = info[0]
+    with zf.open(file) as f:
+        print(f.read().decode())
+        # Olav
+        # teakettles
+        # ...
+
+    zf.extract(file, "/tmp", pwd=password)  # also zf.extractall()
+ 
+### EXAMPLE 6
+import tarfile
+files = ["words1.txt", "words2.txt", "words3.txt", "words4.txt"]
+archive = "archive.tar.gz"
+with tarfile.open(archive, "r:gz") as tar:
+    member = tar.getmember("words3.txt")
+    if member.isfile():
+        tar.extract(member, "/tmp/")
+
