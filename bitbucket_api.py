@@ -10,7 +10,7 @@ from pprint import pprint
 #token_url = "https://bitbucket.org/site/oauth2/access_token"
 
 #client_id = "mauricio"
-#client_secret = "PyMrvYmDnRXPaTytZQTBwjtrn7T6xwY9"
+#client_secret = ""
 
 
 
@@ -20,8 +20,8 @@ class ClientSecrets:
     https://developers.google.com/api-client-library/python/guide/aaa_client_secrets
     Bitbucket does not emit this structure so it must be manually constructed.
     '''
-    client_id = "uddfmGNtxWRJYtEakf"
-    client_secret = "PyMrvYmDnRXPaTytZQTBwjtrn7T6xwY9"
+    client_id = ""
+    client_secret = ""
     redirect_uris = [
       "https://localhost"  # Used for testing.
     ]
